@@ -1,5 +1,6 @@
 name: Tierhaven
 services:
+  # Сервис backend будет добавлен в T-120.
   mongo:
     image: mongo:8.0
     volumes:
