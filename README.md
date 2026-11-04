@@ -1,10 +1,5 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/branding/tierhaven-mark-paper.svg">
-  <img src="docs/branding/tierhaven-mark-ink.svg" width="64" height="64" alt="Логотип Tierhaven">
-</picture>
-
 # Tierhaven
 
 **Тир-листы по общим шаблонам и сравнение вкусов**
@@ -29,7 +24,7 @@
 
 Tierhaven — учебное веб-приложение: пользователь создаёт шаблон с набором объектов, распределяет их по тирам и делится своим списком. Compare сопоставляет два списка одного шаблона: показывает процент совпадения, различия и пять самых спорных объектов.
 
-Сейчас в репозитории подготовлен скелет: `backend/`, `frontend/` и `docs/`. Приложения и зависимости ещё не инициализированы.
+В репозитории подготовлены структура проекта и локальная MongoDB в Docker Compose. Backend и frontend ещё не инициализированы.
 
 <div align="center">
 
@@ -66,4 +61,4 @@ flowchart LR
 
 </div>
 
-Команд запуска пока нет. Backend планируется на Kotlin и Spring Boot, frontend — на Next.js с Bun и Biome, локальная MongoDB — в Docker Compose. Версии и команды будут зафиксированы в конфигурации приложений при их инициализации.
+Для локальной разработки доступна MongoDB 8.0 в Docker Compose. Требования к окружению, запуск, проверка состояния и остановка описаны в [руководстве по локальной разработке](docs/local-development.md).
