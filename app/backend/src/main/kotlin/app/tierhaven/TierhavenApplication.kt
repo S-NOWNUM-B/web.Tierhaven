@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class TierhavenApplication
 
 fun main(args: Array<String>) {
-	runApplication<TierhavenApplication>(*args)
+    runApplication<TierhavenApplication>(*args)
 }

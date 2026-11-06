@@ -156,10 +156,10 @@ flowchart LR
     subgraph Client["Браузер"]
         UI["Интерфейс Tierhaven"]
     end
-    subgraph Frontend["frontend/"]
+    subgraph Frontend["app/frontend/"]
         Next["Next.js App Router"]
     end
-    subgraph Backend["backend/"]
+    subgraph Backend["app/backend/"]
         Spring["Spring Boot API"]
     end
     subgraph Storage["Хранилище"]
@@ -195,23 +195,24 @@ flowchart LR
 
 ```text
 web.Tierhaven/
-├── backend/
-│   ├── build.gradle.kts
-│   └── src/main/kotlin/app/web.Tierhaven/
-│       ├── TierhavenApplication.kt
-│       ├── common/          # ошибки, ProblemDetail, токены, id-генерация
-│       ├── template/        # Template: document, repository, service, controller, dto
-│       ├── tierlist/        # TierList: то же + PlacementValidator
-│       └── compare/         # MatchCalculator (чистый Kotlin), CompareService, controller
-├── frontend/
-│   └── src/
-│       ├── app/             # маршруты App Router
-│       ├── components/      # ui/ (Button, Input…) + feature-компоненты
-│       ├── features/
-│       │   ├── template/
-│       │   ├── tierlist/    # editorReducer.ts + тесты
-│       │   └── compare/
-│       └── lib/             # api-клиент, сгенерированные типы, tokenStorage
+├── app/
+│   ├── backend/
+│   │   ├── build.gradle.kts
+│   │   └── src/main/kotlin/app/tierhaven/
+│   │       ├── TierhavenApplication.kt
+│   │       ├── common/          # ошибки, ProblemDetail, токены, id-генерация
+│   │       ├── template/        # Template: document, repository, service, controller, dto
+│   │       ├── tierlist/        # TierList: то же + PlacementValidator
+│   │       └── compare/         # MatchCalculator (чистый Kotlin), CompareService, controller
+│   └── frontend/
+│       └── src/
+│           ├── app/             # маршруты App Router
+│           ├── components/      # ui/ (Button, Input…) + feature-компоненты
+│           ├── features/
+│           │   ├── template/
+│           │   ├── tierlist/    # editorReducer.ts + тесты
+│           │   └── compare/
+│           └── lib/             # api-клиент, сгенерированные типы, tokenStorage
 ├── docs/
 │   ├── SPEC.md              # этот документ
 │   ├── postman/             # коллекция появится в T-009
@@ -649,7 +650,7 @@ type EditorState = {
 
 infra · `ai` · chore · 1 ч · —
 
-- Папки `backend/`, `frontend/`, `docs/` по разделу 6; `docs/SPEC.md` — экспорт этого документа.
+- Папки `app/backend/`, `app/frontend/`, `docs/` по разделу 6; `docs/SPEC.md` — экспорт этого документа.
 - `.gitignore` (Kotlin/Gradle, Node, `.env`, IDE), `.editorconfig` (2 пробела TS, 4 пробела Kotlin, LF).
 - README: что за проект (1 абзац), как запустить локально (заполнится в T-002/T-003/T-006).
 

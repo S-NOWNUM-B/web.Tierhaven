@@ -20,7 +20,7 @@
 
 Tierhaven — учебное веб-приложение: пользователь создаёт шаблон с набором объектов, распределяет их по тирам и делится своим списком. Compare сопоставляет два списка одного шаблона: показывает процент совпадения, различия и пять самых спорных объектов.
 
-В репозитории подготовлены структура проекта и локальная MongoDB в Docker Compose. Backend и frontend ещё не инициализированы.
+В репозитории подготовлены структура проекта и локальная MongoDB в Docker Compose. В `app/backend` инициализировано приложение Spring Boot; `app/frontend` пока содержит заготовку для frontend.
 
 ## Архитектура
 
@@ -31,10 +31,10 @@ flowchart LR
     subgraph Client["Браузер"]
         UI["Интерфейс Tierhaven"]
     end
-    subgraph Frontend["frontend/"]
+    subgraph Frontend["app/frontend/"]
         Next["Next.js · React · TypeScript<br/>Tailwind CSS"]
     end
-    subgraph Backend["backend/"]
+    subgraph Backend["app/backend/"]
         API["Kotlin · Spring Boot"]
     end
     subgraph Storage["Хранилище"]

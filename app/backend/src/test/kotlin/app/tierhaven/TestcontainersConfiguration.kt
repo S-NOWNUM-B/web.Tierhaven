@@ -9,10 +9,10 @@ import org.testcontainers.utility.DockerImageName
 @TestConfiguration(proxyBeanMethods = false)
 class TestcontainersConfiguration {
 
-	@Bean
-	@ServiceConnection
-	fun mongoDbContainer(): MongoDBContainer {
-		return MongoDBContainer(DockerImageName.parse("mongo:8.0"))
-	}
+    @Bean
+    @ServiceConnection
+    fun mongoDbContainer(): MongoDBContainer {
+        return MongoDBContainer(DockerImageName.parse("mongo:8.0"))
+    }
 
 }
